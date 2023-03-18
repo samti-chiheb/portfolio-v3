@@ -1,7 +1,6 @@
 import { BallCanvas } from "./canvas"
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
-import sectionWrapper from "../hoc/SectionWrapper";
 
 
 const Tech = () => {
@@ -16,4 +15,4 @@ const Tech = () => {
   )
 }
 
-export default sectionWrapper(Tech, "")
+export default SectionWrapper(Tech, "")
