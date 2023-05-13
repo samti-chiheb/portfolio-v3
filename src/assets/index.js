@@ -20,6 +20,11 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import wordpress from "./tech/wordpress.svg";
+import php from "./tech/php.svg";
+import symfony from "./tech/symfony.svg";
+import photoshop from "./tech/photoshop.svg";
+import illustrator from "./tech/illustrator.svg";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -52,6 +57,11 @@ export {
   tailwind,
   typescript,
   threejs,
+  wordpress,
+  php,
+  symfony,
+  photoshop,
+  illustrator,
   meta,
   shopify,
   starbucks,

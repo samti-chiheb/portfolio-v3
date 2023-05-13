@@ -3,7 +3,7 @@ import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 
 
-const Tech = () => {
+const Skills = () => {
   return (
     <div className="flex flex-row flex-wrap justify-center gap-10">
       {technologies.map((technologie) => (
@@ -15,4 +15,4 @@ const Tech = () => {
   )
 }
 
-export default SectionWrapper(Tech, "")
+export default SectionWrapper(Skills, "skills")

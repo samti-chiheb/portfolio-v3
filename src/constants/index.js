@@ -4,17 +4,13 @@ import {
   creator,
   web,
   javascript,
-  typescript,
   html,
   css,
   reactjs,
-  redux,
   tailwind,
   nodejs,
-  mongodb,
   git,
   figma,
-  docker,
   meta,
   starbucks,
   tesla,
@@ -23,6 +19,11 @@ import {
   jobit,
   tripguide,
   threejs,
+  wordpress,
+  php,
+  symfony,
+  photoshop,
+  illustrator,
 } from "../assets";
 
 export const navLinks = [
@@ -31,8 +32,12 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "skills",
+    title: "Skills",
+  },
+  {
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "contact",
@@ -73,16 +78,8 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
     name: "React JS",
     icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
   },
   {
     name: "Tailwind CSS",
@@ -93,24 +90,36 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "php",
+    icon: php,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "symfony",
+    icon: symfony,
+  },
+  {
+    name: "wordpress",
+    icon: wordpress,
   },
   {
     name: "git",
     icon: git,
   },
   {
+    name: "Three JS",
+    icon: threejs,
+  },
+  {
     name: "figma",
     icon: figma,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "photoshop",
+    icon: photoshop,
+  },
+  {
+    name: "illustrator",
+    icon: illustrator,
   },
 ];
 
