@@ -21,6 +21,11 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
       },
+      gradientBg: {
+        background: "rgb(63,94,251)",
+        background:
+          "linear-gradient(0deg, rgba(63,94,251,0) 0%, rgba(5,8,22,1) 100%)",
+      },
     },
   },
   plugins: [],
