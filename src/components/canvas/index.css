@@ -6,16 +6,18 @@
   overflow: hidden;
 }
 
-h1 {
-  top: 50%;
+.parallax-container h1 {
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  min-width: 280px;
 }
 
 .parallax-container p {
-  top: 65%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  min-width: 260px;
 }
 
 .front-text {
@@ -27,10 +29,41 @@ h1 {
 .parallax-container img {
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(2.6);
-  height: 100vh;
+  transform: translate(-50%, -50%);
+  max-width: none;
+  height: 170vh;
 }
 
+
+.parallax-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100vw;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(5, 8, 22, 1) 100%
+
+  );
+}
+
+.parallax-container::after {
+  z-index: 9;
+}
+
+@media screen and (width < 780px) {
+  .parallax-container h1,
+  .parallax-container p {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+
+/* start outlined text*/
 .front-text {
   color: white;
   box-sizing: border-box;
@@ -38,7 +71,6 @@ h1 {
     1px 1px 0 #fff;
 }
 
-/* Real outline for modern browsers */
 @supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .front-text {
     color: transparent;
@@ -48,3 +80,22 @@ h1 {
     text-shadow: none;
   }
 }
+
+p.front-text {
+  color: white;
+  box-sizing: border-box;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
+
+@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  p.front-text {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    box-sizing: border-box;
+    text-stroke: 1px #fff;
+    text-shadow: none;
+  }
+}
+
+/* end outlined text*/

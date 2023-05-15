@@ -23,7 +23,7 @@ const HeroParallax = () => {
       <img src={stars} alt="" className="width-x2 absolute" />
 
       {/* header back text */}
-      <h1 className="absolute font-black text-[#fff] lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px]">
+      <h1 className="absolute font-black text-[#fff] lg:text-[90px] sm:text-[70px] xs:text-[60px] text-[50px] lg:leading-[98px]">
         I'M Chiheb
       </h1>
       <p className="absolute text-[#fff] font-medium lg:text-[36px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]">
@@ -35,7 +35,7 @@ const HeroParallax = () => {
       <img src={bigMoon} alt="" className="width-x2 absolute" />
 
       {/* header front text */}
-      <h1 className="absolute front-text font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px]">
+      <h1 className="absolute front-text font-black lg:text-[90px] sm:text-[70px] xs:text-[60px] text-[50px] lg:leading-[98px]">
         I'M Chiheb
       </h1>
 
