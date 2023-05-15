@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   background,
   bigMoon,
@@ -15,12 +15,43 @@ import {
 import "./index.css";
 
 const HeroParallax = () => {
-  console.log("hey");
-  console.log("backgrooud :" + bigMoon);
+  useEffect(() => {
+    const parallaxEl = document.querySelectorAll(".parallax-container img");
+    let xValue, yValue;
+
+    window.addEventListener("mousemove", (e) => {
+
+      if (window.innerWidth > 768) {
+        
+        xValue = e.clientX - window.innerWidth / 2;
+        yValue = e.clientY - window.innerHeight / 2;
+  
+        parallaxEl.forEach((el) => {
+          let speedX = el.dataset.speedx;
+          let speedY = speedX * 0.9;
+          let speedZ = speedY * 1.1;
+  
+          let inLeft =
+            parseFloat(getComputedStyle(el).left) < window.innerWidth ? 1 : -1;
+          let zValue = e.clientX - parseFloat(getComputedStyle(el).left) * inLeft;
+  
+          el.style.transform = `
+          translateX(calc(-48% + ${-xValue * speedX }px)) 
+          translateY(calc(-50% + ${yValue * speedY }px))
+          perspective(2300px)
+          translateZ(${zValue * speedZ}px )
+          `;
+        });
+      }
+
+
+    });
+  }, []);
+
   return (
     <div className="parallax-container">
-      <img src={background} alt="" className="width-x2 absolute" />
-      <img src={stars} alt="" className="width-x2 absolute" />
+      <img data-speedx="0.3" src={background} alt="" className=" absolute" />
+      <img data-speedx="0.2" src={stars} alt="" className=" absolute" />
 
       {/* header back text */}
       <h1 className="absolute font-black text-[#fff] lg:text-[90px] sm:text-[70px] xs:text-[60px] text-[50px] lg:leading-[98px]">
@@ -32,27 +63,33 @@ const HeroParallax = () => {
         using JS.
       </p>
 
-      <img src={bigMoon} alt="" className="width-x2 absolute" />
+      <img data-speedx="0.17" src={bigMoon} alt="" className=" absolute" />
+      <img data-speedx="0.2" src={littleMoon} alt="" className=" absolute" />
+      <img
+        data-speedx="0.23"
+        src={littleMountains}
+        alt=""
+        className=" absolute"
+      />
+      <img
+        data-speedx="0.19"
+        src={mediumMountains}
+        alt=""
+        className=" absolute"
+      />
+      <img data-speedx="0.16" src={mediumRocks} alt="" className=" absolute" />
+      <img data-speedx="0.1" src={sideMoon} alt="" className=" absolute" />
+      <img data-speedx="0.08" src={bigRocks} alt="" className=" absolute" />
 
       {/* header front text */}
       <h1 className="absolute front-text font-black lg:text-[90px] sm:text-[70px] xs:text-[60px] text-[50px] lg:leading-[98px]">
         I'M Chiheb
       </h1>
-
-      <img src={littleMoon} alt="" className="width-x2 absolute" />
-      <img src={littleMountains} alt="" className="width-x2 absolute" />
-      <img src={mediumMountains} alt="" className="width-x2 absolute" />
-      <img src={mediumRocks} alt="" className="width-x2 absolute" />
-
       <p className="absolute front-text font-medium lg:text-[36px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]">
         I develope UI and Web App
         <br />
         using JS.
       </p>
-
-      <img src={sideMoon} alt="" className="width-x2 absolute" />
-      <img src={skySmoke} alt="" className="width-x2 absolute" />
-      <img src={bigRocks} alt="" className="width-x2 absolute" />
     </div>
   );
 };
