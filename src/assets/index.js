@@ -35,19 +35,15 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
-import background from "./parallax-header/background.svg";
-import bigMoonShadow from "./parallax-header/big-moon-shadow.svg";
-import bigMoon from "./parallax-header/big-moon.svg";
-import bigRocks from "./parallax-header/big-rocks.svg";
-import littleMoonShadow from "./parallax-header/little-moon-shadow.svg";
-import littleMoon from "./parallax-header/little-moon.svg";
-import littleMountains from "./parallax-header/little-mountains.svg";
-import mediumMountains from "./parallax-header/medium-mountains.svg";
-import mediumRocks from "./parallax-header/medium-rocks.svg";
-import moonShadows from "./parallax-header/moon-shadows.svg";
-import sideMoon from "./parallax-header/side-moon.svg";
-import skySmoke from "./parallax-header/sky-smoke.svg";
-import stars from "./parallax-header/stars.svg";
+import bigMoon from "./parallax-header/big moon.svg";
+import bigRocks from "./parallax-header/big rocks.svg";
+import littleMoon from "./parallax-header/little moon.svg";
+import littleMountains from "./parallax-header/little mountains.svg";
+import mediumMountains from "./parallax-header/medium mountain.svg";
+import mediumRocks from "./parallax-header/medium rocks.svg";
+import sideMoon from "./parallax-header/side moon.svg";
+// import skySmoke from "./parallax-header/sky smoke.png";
+// import stars from "./parallax-header/stars.png";
 
 export {
   logo,
@@ -83,17 +79,13 @@ export {
   carrent,
   jobit,
   tripguide,
-  background,
-  bigMoonShadow,
   bigMoon,
   bigRocks,
-  littleMoonShadow,
   littleMoon,
   littleMountains,
   mediumMountains,
   mediumRocks,
-  moonShadows,
   sideMoon,
-  skySmoke,
-  stars,
+  // skySmoke,
+  // stars,
 };

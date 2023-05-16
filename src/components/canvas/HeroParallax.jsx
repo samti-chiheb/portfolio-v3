@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import {
-  background,
   bigMoon,
   bigRocks,
   littleMoon,
@@ -8,8 +7,6 @@ import {
   mediumMountains,
   mediumRocks,
   sideMoon,
-  skySmoke,
-  stars,
 } from "../../assets";
 
 import "./index.css";
@@ -50,8 +47,6 @@ const HeroParallax = () => {
 
   return (
     <div className="parallax-container">
-      <img data-speedx="0.3" src={background} alt="" className=" absolute" />
-      <img data-speedx="0.2" src={stars} alt="" className=" absolute" />
 
       {/* header back text */}
       <h1 className="absolute font-black text-[#fff] lg:text-[90px] sm:text-[70px] xs:text-[60px] text-[50px] lg:leading-[98px]">
@@ -63,8 +58,8 @@ const HeroParallax = () => {
         using JS.
       </p>
 
-      <img data-speedx="0.17" src={bigMoon} alt="" className=" absolute" />
-      <img data-speedx="0.2" src={littleMoon} alt="" className=" absolute" />
+      <img data-speedx="0.27" src={littleMoon} alt="" className=" absolute" />
+      <img data-speedx="0.2" src={bigMoon} alt="" className=" absolute" />
       <img
         data-speedx="0.23"
         src={littleMountains}
