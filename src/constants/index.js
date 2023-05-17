@@ -7,6 +7,7 @@ import {
   html,
   css,
   reactjs,
+  vuejs,
   tailwind,
   nodejs,
   git,
@@ -18,7 +19,6 @@ import {
   carrent,
   jobit,
   tripguide,
-  threejs,
   wordpress,
   php,
   symfony,
@@ -51,7 +51,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "React js Developer",
     icon: mobile,
   },
   {
@@ -64,7 +64,43 @@ const services = [
   },
 ];
 
-const technologies = [
+const basicTech = [
+  
+  {
+    name: "Vue JS",
+    icon: vuejs,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    name: "symfony",
+    icon: symfony,
+  },
+  {
+    name: "wordpress",
+    icon: wordpress,
+  },
+  {
+    name: "git",
+    icon: git,
+  },
+  {
+    name: "figma",
+    icon: figma,
+  },
+  {
+    name: "photoshop",
+    icon: photoshop,
+  },
+  {
+    name: "illustrator",
+    icon: illustrator,
+  },
+];
+
+const advancedTech = [
   {
     name: "HTML 5",
     icon: html,
@@ -82,44 +118,12 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
     name: "Node JS",
     icon: nodejs,
   },
   {
     name: "php",
     icon: php,
-  },
-  {
-    name: "symfony",
-    icon: symfony,
-  },
-  {
-    name: "wordpress",
-    icon: wordpress,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "photoshop",
-    icon: photoshop,
-  },
-  {
-    name: "illustrator",
-    icon: illustrator,
   },
 ];
 
@@ -271,4 +275,5 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, basicTech,
+advancedTech, experiences, testimonials, projects };

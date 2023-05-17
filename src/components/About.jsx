@@ -43,7 +43,7 @@ const About = () => {
       >
         Passionate self-taught full stack web developer with a focus on frontend development. 
         <br />
-        I'm currently improving my skills in the school DIGITAL CAMPUS PARIS, while continuing to expand my knowledge in developing websites using the MERN stack. I enjoy collaborating with clients to understand their needs and create high-quality web applications that solve real-world problems. 
+        I'm currently improving my skills in the school DIGITAL CAMPUS PARIS, while continuing to expand my knowledge in developing websites using MERN stack. <br /> I enjoy collaborating with clients to understand their needs and create high-quality web applications that solve real-world problems. 
         <br />
         Let's work together to bring your ideas to life!
       </motion.p>

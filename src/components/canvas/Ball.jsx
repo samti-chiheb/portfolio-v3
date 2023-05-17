@@ -15,16 +15,10 @@ const Ball = (props) => {
   return (
     <Float speed={5} rotationIntensity={-1} floatIntensity={5}>
       <ambientLight intensity={0.5} />
-      <directionalLight position={[1, 2, 0.5]} />
-      <mesh castShadow receiveShadow scale={2.5}>
-        <sphereGeometry args={[0.9, 32, 32]} />
-        <meshStandardMaterial
-          color="#fff8eb"
-          polygonOffset
-          polygonOffsetFactor={5}
-          flatShading
-          metalness="0.2"
-        />
+      <pointLight position={[10, 10, 10]} intensity={0.5} />
+      <mesh scale={2.3}>
+        <sphereGeometry attach="geometry" args={[1, 16, 16]} />
+        <meshStandardMaterial color="#fff8eb" />
         <Decal
           position={[0, 0, 1]}
           rotation={[2 * Math.PI, 0, 6.25]}
@@ -50,7 +44,10 @@ const BallCanvas = ({ icon }) => {
   return (
     <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls autoRotate rotateSpeed={2} enableZoom={false} />
+        <OrbitControls autoRotate
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2} />
 
         <Ball imgUrl={icon} />
       </Suspense>

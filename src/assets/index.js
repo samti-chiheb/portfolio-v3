@@ -16,6 +16,7 @@ import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
+import vuejs from "./tech/vuejs.svg";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
@@ -42,9 +43,6 @@ import littleMountains from "./parallax-header/little mountains.svg";
 import mediumMountains from "./parallax-header/medium mountain.svg";
 import mediumRocks from "./parallax-header/medium rocks.svg";
 import sideMoon from "./parallax-header/side moon.svg";
-// import skySmoke from "./parallax-header/sky smoke.png";
-// import stars from "./parallax-header/stars.png";
-
 export {
   logo,
   backend,
@@ -63,6 +61,7 @@ export {
   mongodb,
   nodejs,
   reactjs,
+  vuejs,
   redux,
   tailwind,
   typescript,
