@@ -53,7 +53,7 @@ const HeroParallax = () => {
         I'M Chiheb
       </h1>
       <p className="absolute text-[#fff] font-medium lg:text-[36px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]">
-        I develope UI and Web App
+        I develop Web Apps
         <br />
         using JS.
       </p>
@@ -81,7 +81,7 @@ const HeroParallax = () => {
         I'M Chiheb
       </h1>
       <p className="absolute front-text font-medium lg:text-[36px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]">
-        I develope UI and Web App
+        I develop Web Apps
         <br />
         using JS.
       </p>

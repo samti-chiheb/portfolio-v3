@@ -1,0 +1,52 @@
+.badge-container {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  /* transform: translateY(-50%); */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  transition: 0.5s ease-in-out;
+  z-index: 99;
+}
+
+.social-container {
+  width: 48px;
+  background-color: rgba(240, 248, 255, 0.5);
+  padding: 4px 8px;
+  border-radius: 0px 8px 0px 0px;
+}
+
+.social-container img {
+  margin: 4px 0;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.badge-trigger {
+  background-color: rgba(93,39,131, 0.6);
+  color: rgb(255, 255, 255);
+  border-radius: 0px 8px 8px 0px;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 3px solid rgba(93,39,131, 0.6);
+  box-sizing: border-box;
+}
+
+.badge-trigger a {
+  margin: 8px 0;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.badge-trigger p {
+  padding: 4px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+
+}

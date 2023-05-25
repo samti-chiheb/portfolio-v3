@@ -5,6 +5,9 @@ import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+
 const ServiceCard = ({ index, title, icon }) => {
   return (
     <div className="xs:w-[250px] w-full">
@@ -30,6 +33,30 @@ const ServiceCard = ({ index, title, icon }) => {
   );
 };
 
+const CodeBlock = () => {
+  const code = `#samti-chiheb {
+                  background: "commerce business marketing management";
+                  passion: "Passionate about web development!";
+                  design: "Basic design skills (I'll easily collab with designers, trust me! 😂)";
+                  knowledge: "Vast knowledge of the digital world. 🌐";
+                  learning: " 100ms linear Quick learner (my parcours speaks for itself 🎓)"; 
+                }`;
+
+  return (
+    <SyntaxHighlighter
+      language="ruby"
+      style={materialDark}
+      className="max-w-3xl leading-[30px] "
+    >
+      {code}
+    </SyntaxHighlighter>
+  );
+};
+
+const handleClick = (e) => {
+  console.log("hello");
+}
+
 const About = () => {
   return (
     <>
@@ -39,15 +66,28 @@ const About = () => {
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] "
+        className="mt-4 mb-8 text-secondary text-[17px] leading-[30px] "
       >
-        Passionate self-taught full stack web developer with a focus on frontend development. 
-        <br />
-        I'm currently improving my skills in the school DIGITAL CAMPUS PARIS, while continuing to expand my knowledge in developing websites using MERN stack. <br /> I enjoy collaborating with clients to understand their needs and create high-quality web applications that solve real-world problems. 
-        <br />
-        Let's work together to bring your ideas to life!
+        I'm determined to embark on an exciting journey into the world of web
+        development and be part of a productive team
       </motion.p>
-
+      <CodeBlock />
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className="mt-8 text-secondary text-[17px]  leading-[30px] "
+      >
+        Once I built up my web development skills through self-learning, I
+        decided to take a step further and sharpen my abilities at DIGITALE
+        CAMPUS PARIS.
+      </motion.p>
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className="mt-8 text-secondary text-[17px]  leading-[30px] "
+      >
+        Acctually, searching for an internship to gain valuable real-world
+        experience in this exciting field. I enjoy collaborating and i'm motivated to contribute my skills to
+        innovative projects and seeking solve real-world problems.
+      </motion.p>
       <div className="mt-20 flex flex-wrap gap-10 items-center justify-evenly ">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />

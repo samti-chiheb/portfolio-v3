@@ -7,6 +7,8 @@ import {
   Navbar,
   Skills,
   Works,
+  Footer,
+  SocialBar,
   StarsCanvas,
 } from "./components";
 
@@ -17,6 +19,7 @@ const App = () => {
         <div>
           <Navbar />
           <Hero />
+          <SocialBar />
         </div>
         <About />
         <Skills />
@@ -26,6 +29,7 @@ const App = () => {
           <Contact />
           {/* <StarsCanvas /> */}
         </div>
+        <Footer />
       </div>
     </BrowserRouter>
   );

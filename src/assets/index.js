@@ -32,9 +32,9 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import theAdvisor from "./the advisor.png";
+import weatherApp from "./weather app.png";
+import myPortfolio from "./my portfolio.png";
 
 import bigMoon from "./parallax-header/big moon.svg";
 import bigRocks from "./parallax-header/big rocks.svg";
@@ -43,6 +43,13 @@ import littleMountains from "./parallax-header/little mountains.svg";
 import mediumMountains from "./parallax-header/medium mountain.svg";
 import mediumRocks from "./parallax-header/medium rocks.svg";
 import sideMoon from "./parallax-header/side moon.svg";
+
+import githubSocial from "./social/github.svg";
+import linkedin from "./social/linkedin.svg";
+import phone from "./social/phone.svg";
+import instagram from "./social/instagram.svg";
+import mail from "./social/mail.svg";
+
 export {
   logo,
   backend,
@@ -75,9 +82,6 @@ export {
   shopify,
   starbucks,
   tesla,
-  carrent,
-  jobit,
-  tripguide,
   bigMoon,
   bigRocks,
   littleMoon,
@@ -85,6 +89,14 @@ export {
   mediumMountains,
   mediumRocks,
   sideMoon,
+  theAdvisor,
+  weatherApp,
+  myPortfolio,
   // skySmoke,
   // stars,
+  githubSocial,
+  linkedin,
+  phone,
+  instagram,
+  mail,
 };

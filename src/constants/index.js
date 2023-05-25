@@ -16,14 +16,19 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
   wordpress,
   php,
   symfony,
   photoshop,
   illustrator,
+  theAdvisor,
+  weatherApp,
+  myPortfolio,
+  githubSocial,
+  linkedin,
+  phone,
+  instagram,
+  mail,
 } from "../assets";
 
 export const navLinks = [
@@ -65,7 +70,6 @@ const services = [
 ];
 
 const basicTech = [
-  
   {
     name: "Vue JS",
     icon: vuejs,
@@ -185,7 +189,7 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+      "lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet lorem et adip lorem ipsum dolor sit amet lorem et ",
     name: "Sara Lee",
     designation: "CFO",
     company: "Acme Co",
@@ -193,7 +197,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
+      "lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet lorem et adip lorem ipsum dolor sit amet lorem et ",
     name: "Chris Brown",
     designation: "COO",
     company: "DEF Corp",
@@ -201,7 +205,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet lorem et adip lorem ipsum",
     name: "Lisa Wang",
     designation: "CTO",
     company: "456 Enterprises",
@@ -209,60 +213,59 @@ const testimonials = [
   },
 ];
 
+const social = [
+  {
+    name: "linkedIn",
+    icon: linkedin,
+    link: "https://www.linkedin.com/in/samti-chiheb/",
+  },
+  {
+    name: "github",
+    icon: githubSocial,
+    link: "https://github.com/samti-chiheb",
+  },
+  {
+    name: "Instagram",
+    icon: instagram,
+    link: "https://www.instagram.com/shypou/",
+  },
+  {
+    name: "phone",
+    icon: phone,
+    link: "tel:0604533289",
+  },
+  {
+    name: "mail",
+    icon: mail,
+    link: "mailto:chiheb.samti@gmail.com?subject=i like you portfolio",
+  },
+];
+
 const projects = [
   {
-    name: "Car Rent",
+    name: "The advisor",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Powered by React, The Advisor utilizes a random advice API to deliver up to 5 insightful advices per day. Capture inspiration by saving your favorite advice to Notion.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "css",
         color: "green-text-gradient",
       },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: theAdvisor,
+    source_code_link: "https://github.com/samti-chiheb/the-advisor",
   },
   {
-    name: "Job IT",
+    name: "weather app",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Vue.js weather app. Powered by a reliable weather API, it provides real-time updates based on your location. Plus, track your battery level for seamless planning.",
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
+        name: "VueJs",
         color: "green-text-gradient",
       },
       {
@@ -270,10 +273,38 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: weatherApp,
+    source_code_link: "https://github.com/samti-chiheb/weather-app",
+  },
+  {
+    name: "my portfolio",
+    description:
+      "my impressive portfolio created with React and Tailwind. Discover seamless navigation, stunning visuals, and innovative 3D creations powered by React Three Fiber. ",
+    tags: [
+      {
+        name: "react js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
+      {
+        name: "three-react-fiber",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: myPortfolio,
+    source_code_link: "https://github.com/samti-chiheb/portfolio-v3",
   },
 ];
 
-export { services, basicTech,
-advancedTech, experiences, testimonials, projects };
+export {
+  services,
+  basicTech,
+  advancedTech,
+  experiences,
+  testimonials,
+  projects,
+  social,
+};
