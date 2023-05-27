@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  z-index: -1;
+  z-index: 1;
   overflow: hidden;
   background: rgb(54, 38, 133);
   background: linear-gradient(
@@ -41,7 +41,7 @@
   pointer-events: none;
   max-width: none;
   height: 120vh;
-  transition: 0.5s cubic-bezier(0.2, 0.49, 0.32, 0.99);
+  transition: 0.3s cubic-bezier(0.2, 0.49, 0.32, 0.99);
 }
 
 
