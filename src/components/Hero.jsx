@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { styles } from "../styles";
-import {HeroParallax} from "./canvas";
+import HeroParallax from "./heroParallax/HeroParallax";
 
 const Hero = () => {
   return (

@@ -17,14 +17,9 @@ const SocialBar = () => {
 
       container.current.addEventListener("focus", () => {
         setIsOpen(false);
-        console.log("focuesd");
       });
     }
   }, []);
-
-  useEffect(() => {
-    console.log(isOpen);
-  });
 
   useEffect(() => {
     if (!isOpen) {

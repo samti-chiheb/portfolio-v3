@@ -8,7 +8,7 @@ import Works from './Works';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import Footer from './Footer';
-import SocialBar from './social-bar/SocialBar';
+import SocialBar from './socialBar/SocialBar';
 
 export {
   Hero,

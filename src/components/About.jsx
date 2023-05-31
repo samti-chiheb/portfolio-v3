@@ -5,14 +5,11 @@ import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-
 const ServiceCard = ({ index, title, icon }) => {
   return (
     <div className="xs:w-[250px] w-full">
       <motion.div
-        variants={fadeIn("right", "spring", 0.5 * index)}
+        variants={fadeIn("down", "spring", 0.5 * index)}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <div
@@ -33,30 +30,6 @@ const ServiceCard = ({ index, title, icon }) => {
   );
 };
 
-const CodeBlock = () => {
-  const code = `#samti-chiheb {
-                  background: "commerce business marketing management";
-                  passion: "Passionate about web development!";
-                  design: "Basic design skills (I'll easily collab with designers, trust me! 😂)";
-                  knowledge: "Vast knowledge of the digital world. 🌐";
-                  learning: " 100ms linear Quick learner (my parcours speaks for itself 🎓)"; 
-                }`;
-
-  return (
-    <SyntaxHighlighter
-      language="ruby"
-      style={materialDark}
-      className="max-w-3xl leading-[30px] "
-    >
-      {code}
-    </SyntaxHighlighter>
-  );
-};
-
-const handleClick = (e) => {
-  console.log("hello");
-}
-
 const About = () => {
   return (
     <>
@@ -66,12 +39,27 @@ const About = () => {
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 mb-8 text-secondary text-[17px] leading-[30px] "
+        className="mt-4 text-secondary text-[17px] leading-[30px] "
       >
         I'm determined to embark on an exciting journey into the world of web
         development and be part of a productive team
       </motion.p>
-      <CodeBlock />
+
+      <motion.pre 
+      variants={textVariant()}
+      className="mt-8 bg-tertiary text-[16px] text-white leading-[40px] p-8 max-w-[1000px] overflow-x-auto">
+        <code>
+          <span className="green-text-gradient">#samtiChiheb</span>{" "}
+          {`{
+      background: "commerce business marketing management"; 
+      passion: "Passionate about web development!"; 
+      design: "Basic design skills (I'll easily collab with designers, trust me! 😂)"; 
+      knowledge: "Vast knowledge of the digital world. 🌐"; 
+      learning: " 100ms linear Quick learner (my parcours speaks for itself 🎓)";
+    }`}
+        </code>
+      </motion.pre>
+
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-8 text-secondary text-[17px]  leading-[30px] "
@@ -85,8 +73,9 @@ const About = () => {
         className="mt-8 text-secondary text-[17px]  leading-[30px] "
       >
         Acctually, searching for an internship to gain valuable real-world
-        experience in this exciting field. I enjoy collaborating and i'm motivated to contribute my skills to
-        innovative projects and seeking solve real-world problems.
+        experience in this exciting field. I enjoy collaborating and i'm
+        motivated to contribute my skills to innovative projects and seeking
+        solve real-world problems.
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10 items-center justify-evenly ">
         {services.map((service, index) => (
