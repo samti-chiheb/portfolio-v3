@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import {
   bigMoon,
   bigRocks,
-  littleMoon,
+  // littleMoon,
   littleMountains,
   mediumMountains,
   mediumRocks,
@@ -31,7 +31,7 @@ const HeroParallax = () => {
       const parallaxEl = parallaxContainer.querySelectorAll("img");
 
       parallaxEl.forEach((el) => {
-        const speedX = parseFloat(el.getAttribute("data-speedx")) * 0.7;
+        const speedX = parseFloat(el.getAttribute("data-speedx")) ;
         const speedY = speedX * 0.7;
         const speedZ = speedY * 1.1;
 
@@ -58,17 +58,17 @@ const HeroParallax = () => {
   return (
     <div className="parallax-container" ref={parallaxContainerRef}>
       {/* Header back text */}
-      <h1 className="absolute font-black text-[#fff] lg:text-[90px] sm:text-[70px] xs:text-[60px] text-[50px] lg:leading-[98px]">
+      <h1 className="absolute  font-black text-[#fff] lg:text-[90px] sm:text-[70px] xs:text-[60px] text-[50px] lg:leading-[98px]">
         I'M Chiheb
       </h1>
-      <p className="absolute text-[#fff] font-medium lg:text-[36px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]">
+      <p className="absolute mt-5 text-[#fff] font-medium lg:text-[46px] sm:text-[32px] xs:text-[24px] text-[22px] lg:leading-[40px]">
         I develop Web Apps
         <br />
         using JS.
       </p>
 
       {/* Images */}
-      <img data-speedx="0.27" src={littleMoon} alt="" className="absolute" />
+      {/* <img data-speedx="0.27" src={littleMoon} alt="" className="absolute" /> */}
       <img data-speedx="0.2" src={bigMoon} alt="" className="absolute" />
       <img
         data-speedx="0.23"
@@ -90,7 +90,7 @@ const HeroParallax = () => {
       <h1 className="absolute front-text font-black lg:text-[90px] sm:text-[70px] xs:text-[60px] text-[50px] lg:leading-[98px]">
         I'M Chiheb
       </h1>
-      <p className="absolute front-text font-medium lg:text-[36px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]">
+      <p className="absolute mt-5 text-[#fff] font-medium lg:text-[46px] sm:text-[32px] xs:text-[24px] text-[22px] lg:leading-[40px]">
         I develop Web Apps
         <br />
         using JS.

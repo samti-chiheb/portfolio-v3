@@ -32,7 +32,11 @@ const SocialBar = () => {
   }, [isOpen]);
 
   return (
-    <aside className="badge-container" ref={container}>
+    <aside
+      className="badge-container"
+      ref={container}
+      onClick={() => setIsOpen(!isOpen)}
+    >
       <div className="social-container">
         {social.map((element, index) => (
           <a key={index} href={element.link} target="_blank">
@@ -42,9 +46,7 @@ const SocialBar = () => {
       </div>
       <div className="badge-trigger">
         <p ref={text}>Connect</p>
-        <a onClick={() => setIsOpen(!isOpen)}>
-          {!isOpen ? <CgPushChevronRight /> : <CgPushChevronLeft />}
-        </a>
+        <a>{!isOpen ? <CgPushChevronRight /> : <CgPushChevronLeft />}</a>
       </div>
     </aside>
   );
