@@ -9,8 +9,10 @@ import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import Footer from './Footer';
 import SocialBar from './socialBar/SocialBar';
+import Loader from './loader/Loader';
 
 export {
+  Loader,
   Hero,
   Navbar,
   About,

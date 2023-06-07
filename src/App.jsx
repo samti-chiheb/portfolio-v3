@@ -1,5 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import {
+  Loader,
   About,
   Contact,
   Feedbacks,
@@ -13,14 +15,28 @@ import {
 } from "./components";
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        <div>
-          <Navbar />
-          <Hero />
-          <SocialBar />
-        </div>
+      <Loader
+        className="bg-secondary"
+        style={{ visibility: !loading ? "hidden" : "visible" }}
+      />
+      <StarsCanvas />
+      <div
+        className="relative z-0 bg-primary main-element"
+        style={{ visibility: loading ? "hidden" : "visible" }}
+      >
+        <Navbar />
+        <Hero />
+        <SocialBar />
         <About />
         <Skills />
         <Works />

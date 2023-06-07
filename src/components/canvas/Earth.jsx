@@ -9,17 +9,6 @@ const Earth = () => {
 
   return (
     <>
-      <ambientLight intensity={2.5} />
-      <pointLight color="#3391FF" intensity={16.5} position={[15, 15, 15]} />
-  
-      <spotLight
-        color="#F6BBFD"
-        intensity={16.5}
-        position={[-180, -180, -180]}
-        angle={Math.PI / 4}
-        penumbra={0.2}
-        castShadow
-      />
       <mesh>
         <primitive
           object={earth.scene}
@@ -28,6 +17,16 @@ const Earth = () => {
           rotation={[0, 0, 0]}
         />
       </mesh>
+      <ambientLight intensity={2.5} />
+      <pointLight color="#3391FF" intensity={16.5} position={[15, 15, 15]} />
+      <spotLight
+        color="#F6BBFD"
+        intensity={16.5}
+        position={[-180, -180, -180]}
+        angle={Math.PI / 4}
+        penumbra={0.2}
+        castShadow
+      />
     </>
   );
 };

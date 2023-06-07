@@ -51,6 +51,7 @@ const Contact = () => {
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl "
+        id="contact"
       >
         <p className={styles.sectionSubText}>get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -102,7 +103,7 @@ const Contact = () => {
       </motion.div>
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[400px]"
       >
         <EarthCanvas />
       </motion.div>
@@ -110,4 +111,4 @@ const Contact = () => {
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+export default SectionWrapper(Contact, "");
