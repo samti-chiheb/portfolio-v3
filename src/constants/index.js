@@ -12,10 +12,6 @@ import {
   nodejs,
   git,
   figma,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
   wordpress,
   php,
   symfony,
@@ -24,6 +20,7 @@ import {
   theAdvisor,
   weatherApp,
   myPortfolio,
+  cmsPortfolio,
   githubSocial,
   linkedin,
   phone,
@@ -133,55 +130,15 @@ const advancedTech = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    title: "title",
+    company_name: "compagny",
+    icon: "icon",
+    iconBg: "#fff",
+    date: "example 2020 - example 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "lorem ipsum dolor sit amet",
+      "lorem ipsum dolor sit am",
+      "lorem ipsum dolor sit am"
     ],
   },
 ];
@@ -243,6 +200,48 @@ const social = [
 
 const projects = [
   {
+    name: "CMS Portfolio",
+    description:
+      "React-powered Portfolio integrated with Sanity CMS. Explore my projects with ease, thanks to a seamless content management system that keeps the portfolio up to date effortlessly. ",
+    tags: [
+      {
+        name: "react js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "scss",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Headless-CMS-Sanity",
+        color: "green-text-gradient",
+      },
+    ],
+    image: cmsPortfolio,
+    source_code_link: "https://github.com/samti-chiheb/portfolio-v3",
+  },
+  {
+    name: "my portfolio",
+    description:
+      "my impressive portfolio created with React and Tailwind. Discover seamless navigation, stunning visuals, and innovative 3D creations powered by React Three Fiber. ",
+    tags: [
+      {
+        name: "react js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
+      {
+        name: "three-react-fiber",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: myPortfolio,
+    source_code_link: "https://github.com/samti-chiheb/portfolio-v3",
+  },
+  {
     name: "The advisor",
     description:
       "Powered by React, The Advisor utilizes a random advice API to deliver up to 5 insightful advices per day. Capture inspiration by saving your favorite advice to Notion.",
@@ -275,27 +274,6 @@ const projects = [
     ],
     image: weatherApp,
     source_code_link: "https://github.com/samti-chiheb/weather-app",
-  },
-  {
-    name: "my portfolio",
-    description:
-      "my impressive portfolio created with React and Tailwind. Discover seamless navigation, stunning visuals, and innovative 3D creations powered by React Three Fiber. ",
-    tags: [
-      {
-        name: "react js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "green-text-gradient",
-      },
-      {
-        name: "three-react-fiber",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: myPortfolio,
-    source_code_link: "https://github.com/samti-chiheb/portfolio-v3",
   },
 ];
 

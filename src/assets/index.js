@@ -27,14 +27,11 @@ import symfony from "./tech/symfony.svg";
 import photoshop from "./tech/photoshop.svg";
 import illustrator from "./tech/illustrator.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import theAdvisor from "./the_advisor.png";
+import weatherApp from "./weather_app.webp";
+import myPortfolio from "./my_portfolio.png";
+import cmsPortfolio from "./csm_portfolio.webp";
 
-import theAdvisor from "./the advisor.png";
-import weatherApp from "./weather app.png";
-import myPortfolio from "./my portfolio.png";
 
 import bigMoon from "./parallax-header/big moon.svg";
 import bigRocks from "./parallax-header/big rocks.svg";
@@ -78,10 +75,6 @@ export {
   symfony,
   photoshop,
   illustrator,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
   bigMoon,
   bigRocks,
   littleMoon,
@@ -92,6 +85,7 @@ export {
   theAdvisor,
   weatherApp,
   myPortfolio,
+  cmsPortfolio,
   // skySmoke,
   // stars,
   githubSocial,
