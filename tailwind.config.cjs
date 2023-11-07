@@ -21,10 +21,11 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
       },
-      gradientBg: {
-        background: "rgb(63,94,251)",
-        background:
+      backgroundImage: {
+        gradientBg:
           "linear-gradient(0deg, rgba(63,94,251,0) 0%, rgba(5,8,22,1) 100%)",
+        gradientSecondary:
+          "linear-gradient(222deg, rgba(54,38,133,0.33) 0%, rgba(92,34,128,0.33) 25%, rgba(125,30,129,0.33) 50%, rgba(225,117,170,0.33) 100%)",
       },
     },
   },

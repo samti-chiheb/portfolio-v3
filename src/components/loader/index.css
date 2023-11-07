@@ -1,10 +1,12 @@
 .svg-container{
+  position: fixed;
   width: 100vw;
   height: 100vh;
   display: flex;
   position: fixed;
   top: 0;
-  z-index: -3;
+  z-index: 99;
+  background-color: #050816;
 }
 
 .svg-container svg{

@@ -14,6 +14,8 @@ import {
   figma,
   wordpress,
   php,
+  mongodb,
+  nextJs,
   symfony,
   photoshop,
   illustrator,
@@ -24,8 +26,10 @@ import {
   githubSocial,
   linkedin,
   phone,
-  instagram,
   mail,
+  yoannImg,
+  beerRepo,
+  jedy
 } from "../assets";
 
 export const navLinks = [
@@ -42,6 +46,10 @@ export const navLinks = [
     title: "Projects",
   },
   {
+    id: "testimonials",
+    title: "Testimonials",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -49,19 +57,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "NextJS Developer",
     icon: web,
   },
   {
-    title: "React js Developer",
+    title: "ReactJS Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Symfony Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "API Management",
     icon: creator,
   },
 ];
@@ -76,8 +84,8 @@ const basicTech = [
     icon: tailwind,
   },
   {
-    name: "symfony",
-    icon: symfony,
+    name: "mongodb",
+    icon: mongodb,
   },
   {
     name: "wordpress",
@@ -123,50 +131,44 @@ const advancedTech = [
     icon: nodejs,
   },
   {
+    name: "Next JS",
+    icon: nextJs,
+  },
+  {
     name: "php",
     icon: php,
+  },
+  {
+    name: "symfony",
+    icon: symfony,
   },
 ];
 
 const experiences = [
   {
-    title: "title",
-    company_name: "compagny",
-    icon: "icon",
+    title: "Full stack developer",
+    company_name: "Jedy formation",
+    icon: jedy,
     iconBg: "#fff",
-    date: "example 2020 - example 2021",
+    date: "August 2023 - February 2023",
     points: [
-      "lorem ipsum dolor sit amet",
-      "lorem ipsum dolor sit am",
-      "lorem ipsum dolor sit am"
+      `Web development (Javascript, Next.js, PHP, Symfony, SASS) .`,
+      `Development of a Next.js web application communicating with an API created in Symfony.`,
     ],
   },
 ];
 
 const testimonials = [
   {
-    testimonial:
-      "lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet lorem et adip lorem ipsum dolor sit amet lorem et ",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet lorem et adip lorem ipsum dolor sit amet lorem et ",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet lorem et adip lorem ipsum",
-    name: "Lisa Wang",
+    testimonial: `J'ai pu travailler avec Chiheb quelques mois sur un projet (NextJS - Symfony).
+Chiheb est un profil curieux, appliqué et qui progresse vite. Il a réalisé un projet de qualité en ayant un rôle de dev fullstack, ce qui m'amène à vous recommander son profil.`,
+    name: "Yoann Coualan",
     designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    company: "Jedy Formation",
+    image: yoannImg,
+    testimonialLink:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7121052156912128001/",
+    personLink: "https://www.linkedin.com/in/yoanncoualan/",
   },
 ];
 
@@ -182,11 +184,6 @@ const social = [
     link: "https://github.com/samti-chiheb",
   },
   {
-    name: "Instagram",
-    icon: instagram,
-    link: "https://www.instagram.com/shypou/",
-  },
-  {
     name: "phone",
     icon: phone,
     link: "tel:0604533289",
@@ -200,16 +197,38 @@ const social = [
 
 const projects = [
   {
+    name: "Beer repository",
+    description:
+      " A React-based exploration of beers styled with Styled-components, tapping into the 'https://punkapi.com/' API, outfitted with custom-built pagination, tailored hooks, and smart cache management for a high-performance web experience",
+    tags: [
+      {
+        name: "React JS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Styled-components",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "API Implementation",
+        color: "green-text-gradient",
+      },
+    ],
+    image: beerRepo,
+    source_code_link: "https://github.com/samti-chiheb/custom-portfolio",
+    view_code_link: "https://innovatelifestore.com/",
+  },
+  {
     name: "CMS Portfolio",
     description:
       "React-powered Portfolio integrated with Sanity CMS. Explore my projects with ease, thanks to a seamless content management system that keeps the portfolio up to date effortlessly. ",
     tags: [
       {
-        name: "react js",
+        name: "React JS",
         color: "blue-text-gradient",
       },
       {
-        name: "scss",
+        name: "SCSS",
         color: "pink-text-gradient",
       },
       {
@@ -218,7 +237,7 @@ const projects = [
       },
     ],
     image: cmsPortfolio,
-    source_code_link: "https://github.com/samti-chiheb/portfolio-v3",
+    source_code_link: "https://github.com/samti-chiheb/custom-portfolio",
   },
   {
     name: "my portfolio",
@@ -226,54 +245,63 @@ const projects = [
       "my impressive portfolio created with React and Tailwind. Discover seamless navigation, stunning visuals, and innovative 3D creations powered by React Three Fiber. ",
     tags: [
       {
-        name: "react js",
+        name: "React JS",
         color: "blue-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Tailwind",
         color: "green-text-gradient",
-      },
-      {
-        name: "three-react-fiber",
-        color: "pink-text-gradient",
       },
     ],
     image: myPortfolio,
     source_code_link: "https://github.com/samti-chiheb/portfolio-v3",
+    view_code_link: "https://samtichiheb.com",
   },
+
   {
     name: "The advisor",
     description:
       "Powered by React, The Advisor utilizes a random advice API to deliver up to 5 insightful advices per day. Capture inspiration by saving your favorite advice to Notion.",
     tags: [
       {
-        name: "react",
+        name: "React JS",
         color: "blue-text-gradient",
       },
       {
-        name: "css",
+        name: "CSS",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "API Implementation",
         color: "green-text-gradient",
       },
     ],
     image: theAdvisor,
     source_code_link: "https://github.com/samti-chiheb/the-advisor",
+    view_code_link: "https://chiheb-react01.netlify.app",
   },
+
   {
     name: "weather app",
     description:
       "Vue.js weather app. Powered by a reliable weather API, it provides real-time updates based on your location. Plus, track your battery level for seamless planning.",
     tags: [
       {
-        name: "VueJs",
+        name: "Vue JS",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "CSS",
         color: "pink-text-gradient",
+      },
+      {
+        name: "API Implementation",
+        color: "blue-text-gradient",
       },
     ],
     image: weatherApp,
     source_code_link: "https://github.com/samti-chiheb/weather-app",
+    view_code_link: "https://chiheb-vue01.netlify.app/",
   },
 ];
 

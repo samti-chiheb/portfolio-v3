@@ -11,25 +11,25 @@ import {
   Works,
   Footer,
   SocialBar,
-  StarsCanvas,
+  Experience,
 } from "./components";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (loading) {
+      document.body.style.overflow = "hidden";
+    }
     setTimeout(() => {
       setLoading(false);
+      document.body.style.overflow = "auto";
     }, 3000);
-  }, []);
+  }, [loading]);
 
   return (
     <BrowserRouter>
-      <Loader
-        className="bg-secondary"
-        style={{ visibility: !loading ? "hidden" : "visible" }}
-      />
-      <StarsCanvas />
+      {loading && <Loader />}
       <div
         className="relative z-0 bg-primary main-element"
         style={{ visibility: loading ? "hidden" : "visible" }}
@@ -39,11 +39,11 @@ const App = () => {
         <SocialBar />
         <About />
         <Skills />
+        <Experience />
         <Works />
         <Feedbacks />
         <div className="relative z-0">
           <Contact />
-          <StarsCanvas />
         </div>
         <Footer />
       </div>

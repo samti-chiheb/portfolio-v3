@@ -7,10 +7,10 @@ import { SectionWrapper } from "../hoc";
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    <div className="xs:w-[250px] w-full">
+    <div className="xs:w-[250px] w-full ">
       <motion.div
-        variants={fadeIn("down", "spring", 0.5 * index)}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+        variants={fadeIn("down", "spring", 0.7 * index)}
+        className="w-full green-pink-gradient p-[1px] rounded-[20px] "
       >
         <div
           options={{
@@ -45,9 +45,10 @@ const About = () => {
         development and be part of a productive team
       </motion.p>
 
-      <motion.pre 
-      variants={textVariant()}
-      className="mt-8 bg-tertiary text-[16px] text-white leading-[40px] p-8 max-w-[1000px] overflow-x-auto">
+      <motion.pre
+        variants={textVariant()}
+        className="mt-8 bg-tertiary text-[16px] text-white leading-[40px] p-8 max-w-[1000px] overflow-x-auto"
+      >
         <code>
           <span className="green-text-gradient">#samtiChiheb</span>{" "}
           {`{
@@ -64,18 +65,19 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-8 text-secondary text-[17px]  leading-[30px] "
       >
-        Once I built up my web development skills through self-learning, I
-        decided to take a step further and sharpen my abilities at DIGITALE
-        CAMPUS PARIS.
+        After learning web development on my own and getting more skills at
+        DIGITALE CAMPUS PARIS, I'm ready for a real job in this exciting area.
+        I'm not looking for just a short-term internship anymore. I want to join
+        a team for a long-term job where I can really get into projects and help
+        solve problems.
       </motion.p>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-8 text-secondary text-[17px]  leading-[30px] "
       >
-        Acctually, searching for an internship to gain valuable real-world
-        experience in this exciting field. I enjoy collaborating and i'm
-        motivated to contribute my skills to innovative projects and seeking
-        solve real-world problems.
+        I like working with others and am ready to use what I know in a place
+        that's making cool stuff happen. I'm on the lookout for a full-time job
+        where I can grow and keep getting better at what I do.
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10 items-center justify-evenly ">
         {services.map((service, index) => (

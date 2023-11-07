@@ -1,9 +1,8 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-
+import { contactImg } from "../assets";
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
@@ -46,6 +45,15 @@ const Contact = () => {
     })
   };
 
+  const floatingAnimation = {
+    y: [-10, 10], 
+    transition: {
+      y: {
+        duration: 1, 
+        yoyo: Infinity, 
+      },
+    },
+  };
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
@@ -69,6 +77,7 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="what's your name ?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              required
             />
           </label>
           <label className="flex flex-col">
@@ -80,6 +89,7 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="what's your email ?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              required
             />
           </label>
           <label className="flex flex-col">
@@ -91,6 +101,7 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="what do you want to say ?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              required
             />
           </label>
           <button
@@ -105,7 +116,18 @@ const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[400px]"
       >
-        <EarthCanvas />
+        <motion.img
+          src={contactImg}
+          alt="Floating Image"
+          animate={{
+            y: [60, 5],
+          }}
+          transition={{
+            duration: 2.5,
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
+        />
       </motion.div>
     </div>
   );
