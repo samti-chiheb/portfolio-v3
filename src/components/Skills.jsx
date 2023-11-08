@@ -3,8 +3,9 @@ import { basicTech, advancedTech } from "../constants";
 import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { styles } from "../styles";
+import { useTranslation } from "react-i18next";
 
-const SkillsCategorie = ({title, skills}) => {
+const SkillsCategorie = ({ title, skills }) => {
   return (
     <>
       <p className={`${styles.sectionSubText} m-[16px]`}>{title}</p>
@@ -29,14 +30,19 @@ const SkillsCategorie = ({title, skills}) => {
 };
 
 const Skills = () => {
+  const { t } = useTranslation();
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My skills</p>
-        <h2 className={`${styles.sectionHeadText}`}>Technologies.</h2>
+        <p className={`${styles.sectionSubText} `}>
+          {t("section_subtext_skills")}{" "}
+        </p>
+        <h2 className={`${styles.sectionHeadText}`}>
+          {t("section_headtext_skills")}
+        </h2>
       </motion.div>
-      <SkillsCategorie title={". Advanced level"} skills={advancedTech} />
-      <SkillsCategorie title={". Basic level"} skills={basicTech} />
+      <SkillsCategorie title={t("advanced_level")} skills={advancedTech} />
+      <SkillsCategorie title={t("basic_level")} skills={basicTech} />
     </>
   );
 };

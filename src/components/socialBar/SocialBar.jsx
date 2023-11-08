@@ -5,12 +5,12 @@ import { CgPushChevronRight } from "react-icons/cg";
 import { CgPushChevronLeft } from "react-icons/cg";
 
 const SocialBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const container = useRef(null);
   const text = useRef(null);
 
   useEffect(() => {
-    if (!isOpen) {
+    if (isOpen) {
       window.addEventListener("scroll", () => {
         setIsOpen(false);
       });

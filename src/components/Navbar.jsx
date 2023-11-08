@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 `}
-      style={{background: "linear-gradient(0deg, rgba(63,94,251,0) 0%, rgba(5,8,22,0.5) 50% )"}}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-gradientPrimary`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -24,10 +26,10 @@ const Navbar = () => {
         >
           <img src={logo} alt={logo} className="w-9 h-9 object-contain" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
-             SAMTI Chiheb
+            SAMTI Chiheb
           </p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden lg:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -36,11 +38,14 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              <a href={`#${link.id}`}>{t(link.title)}</a>
             </li>
           ))}
+          <li>
+            <LanguageSwitcher />
+          </li>
         </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt={menu}
@@ -64,9 +69,12 @@ const Navbar = () => {
                     setActive(link.title);
                   }}
                 >
-                  <a href={`#${link.id}`}>{link.title}</a>
+                  <a href={`#${link.id}`}>{t(link.title)}</a>
                 </li>
               ))}
+              <li>
+                <LanguageSwitcher />
+              </li>
             </ul>
           </div>
         </div>

@@ -1,10 +1,11 @@
+import "./i18n";
 import { BrowserRouter } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import {
   Loader,
   About,
   Contact,
-  Feedbacks,
+  Testimonial,
   Hero,
   Navbar,
   Skills,
@@ -41,7 +42,7 @@ const App = () => {
         <Skills />
         <Experience />
         <Works />
-        <Feedbacks />
+        <Testimonial />
         <div className="relative z-0">
           <Contact />
         </div>

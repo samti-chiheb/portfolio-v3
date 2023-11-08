@@ -29,29 +29,29 @@ import {
   mail,
   yoannImg,
   beerRepo,
-  jedy
+  jedy,
 } from "../assets";
 
-export const navLinks = [
+const navLinks = [
   {
     id: "about",
-    title: "About",
+    title: "nav_about",
   },
   {
     id: "skills",
-    title: "Skills",
+    title: "nav_skills",
   },
   {
     id: "projects",
-    title: "Projects",
+    title: "nav_projects",
   },
   {
     id: "testimonials",
-    title: "Testimonials",
+    title: "nav_testimonials",
   },
   {
     id: "contact",
-    title: "Contact",
+    title: "nav_contact",
   },
 ];
 
@@ -146,22 +146,18 @@ const advancedTech = [
 
 const experiences = [
   {
-    title: "Full stack developer",
+    title: "experiences_01_title",
     company_name: "Jedy formation",
     icon: jedy,
     iconBg: "#fff",
-    date: "August 2023 - February 2023",
-    points: [
-      `Web development (Javascript, Next.js, PHP, Symfony, SASS) .`,
-      `Development of a Next.js web application communicating with an API created in Symfony.`,
-    ],
+    date: "experiences_01_date",
+    points: [`experiences_01_point1`, `experiences_01_point2`],
   },
 ];
 
 const testimonials = [
   {
-    testimonial: `J'ai pu travailler avec Chiheb quelques mois sur un projet (NextJS - Symfony).
-Chiheb est un profil curieux, appliqué et qui progresse vite. Il a réalisé un projet de qualité en ayant un rôle de dev fullstack, ce qui m'amène à vous recommander son profil.`,
+    testimonial: "testimonials_01_feedback",
     name: "Yoann Coualan",
     designation: "CTO",
     company: "Jedy Formation",
@@ -198,8 +194,7 @@ const social = [
 const projects = [
   {
     name: "Beer repository",
-    description:
-      " A React-based exploration of beers styled with Styled-components, tapping into the 'https://punkapi.com/' API, outfitted with custom-built pagination, tailored hooks, and smart cache management for a high-performance web experience",
+    description: "beer_repository_description",
     tags: [
       {
         name: "React JS",
@@ -220,8 +215,7 @@ const projects = [
   },
   {
     name: "CMS Portfolio",
-    description:
-      "React-powered Portfolio integrated with Sanity CMS. Explore my projects with ease, thanks to a seamless content management system that keeps the portfolio up to date effortlessly. ",
+    description: "cms_portfolio_description",
     tags: [
       {
         name: "React JS",
@@ -241,8 +235,7 @@ const projects = [
   },
   {
     name: "my portfolio",
-    description:
-      "my impressive portfolio created with React and Tailwind. Discover seamless navigation, stunning visuals, and innovative 3D creations powered by React Three Fiber. ",
+    description: "my_portfolio_description",
     tags: [
       {
         name: "React JS",
@@ -260,8 +253,7 @@ const projects = [
 
   {
     name: "The advisor",
-    description:
-      "Powered by React, The Advisor utilizes a random advice API to deliver up to 5 insightful advices per day. Capture inspiration by saving your favorite advice to Notion.",
+    description: "the_advisor_description",
     tags: [
       {
         name: "React JS",
@@ -283,8 +275,7 @@ const projects = [
 
   {
     name: "weather app",
-    description:
-      "Vue.js weather app. Powered by a reliable weather API, it provides real-time updates based on your location. Plus, track your battery level for seamless planning.",
+    description: "weather_app_description",
     tags: [
       {
         name: "Vue JS",
@@ -306,6 +297,7 @@ const projects = [
 ];
 
 export {
+  navLinks,
   services,
   basicTech,
   advancedTech,

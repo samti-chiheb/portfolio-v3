@@ -3,8 +3,9 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
+import { useTranslation } from "react-i18next";
 
-const FeedbackCard = ({
+const TestimonialCard = ({
   index,
   testimonial,
   name,
@@ -13,18 +14,16 @@ const FeedbackCard = ({
   image,
   testimonialLink,
   personLink,
+  t,
 }) => {
   const handleTestimonialClick = () => {
-     if (testimonialLink) {
-      
-       window.open(testimonialLink, "_blank", "noopener,noreferrer");
-     }
-     console.log(testimonialLink);
-    };
-    
-    const handlePersonClick = () => {
+    if (testimonialLink) {
+      window.open(testimonialLink, "_blank", "noopener,noreferrer");
+    }
+  };
+
+  const handlePersonClick = () => {
     if (personLink) {
-     
       window.open(personLink, "_blank", "noopener,noreferrer");
     }
   };
@@ -33,7 +32,6 @@ const FeedbackCard = ({
     <motion.div
       variants={fadeIn("", "spring", index * 0.5, 0.75)}
       className="bg-black-200 p-10 rounded-3xl xs:w-[420px] w-full m-auto"
-      
     >
       <p className="text-white font-black text-[48px]">"</p>
       <div className="mt-1">
@@ -41,7 +39,7 @@ const FeedbackCard = ({
           className="text-white tracking-wider text-[16px] cursor-pointer"
           onClick={handleTestimonialClick}
         >
-          {testimonial}
+          {t(testimonial)}
         </p>
         <div
           className="mt-7 flex justify-between items-center gap-1 cursor-pointer"
@@ -66,24 +64,35 @@ const FeedbackCard = ({
   );
 };
 
-const Feedbacks = () => {
+const Testimonial = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="mt-12 bg-black-100 rounded-[20px] " id="testimonials">
       <div
         className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}
       >
         <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>What others say</p>
-          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+          <p className={styles.sectionSubText}>
+            {t("section_subtext_testimonials")}
+          </p>
+          <h2 className={styles.sectionHeadText}>
+            {t("section_headtext_testimonials")}
+          </h2>
         </motion.div>
       </div>
       <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7`}>
         {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
+          <TestimonialCard
+            key={testimonial.name}
+            index={index}
+            t={t}
+            {...testimonial}
+          />
         ))}
       </div>
     </div>
   );
 };
 
-export default SectionWrapper(Feedbacks, "feedback");
+export default SectionWrapper(Testimonial, "testimonial");

@@ -6,7 +6,10 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+import { useTranslation } from "react-i18next";
+
 const Contact = () => {
+  const { t } = useTranslation();
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -23,34 +26,39 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs.send(
-      "service_ldxn5d7",
-      "template_2m7c6j5",
-      {
-        from_name: form.name,
-        to_name: "chiheb",
-        from_email: form.email,
-        to_email: "chiheb.samti@gmail.com",
-        message: form.message,
-      },
-      "rSjd1T5Gp5UzmE1PS"
-    ).then(()=>{
-      setLoading(false)
-      alert('Thank you, i will get back to you as soon as possible.')
-      setForm({ name: "", email: "", message: "" });
-    }, (error)=>{
-      setLoading(False)
-      console.log(error)
-      alert('Somthing went wrong')
-    })
+    emailjs
+      .send(
+        "service_ldxn5d7",
+        "template_2m7c6j5",
+        {
+          from_name: form.name,
+          to_name: "chiheb",
+          from_email: form.email,
+          to_email: "chiheb.samti@gmail.com",
+          message: form.message,
+        },
+        "rSjd1T5Gp5UzmE1PS"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you, i will get back to you as soon as possible.");
+          setForm({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          setLoading(False);
+          console.log(error);
+          alert("Somthing went wrong");
+        }
+      );
   };
 
   const floatingAnimation = {
-    y: [-10, 10], 
+    y: [-10, 10],
     transition: {
       y: {
-        duration: 1, 
-        yoyo: Infinity, 
+        duration: 1,
+        yoyo: Infinity,
       },
     },
   };
@@ -61,45 +69,55 @@ const Contact = () => {
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl "
         id="contact"
       >
-        <p className={styles.sectionSubText}>get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <p className={styles.sectionSubText}>
+          {t("contact_section_subtitle")}{" "}
+        </p>
+        <h3 className={styles.sectionHeadText}>
+          {t("contact_section_title")}{" "}
+        </h3>
         <form
           ref={formRef}
           onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">your name</span>
+            <span className="text-white font-medium mb-4">
+              {t("contact_label_name")}{" "}
+            </span>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="what's your name ?"
+              placeholder={t("contact_input_name_placeholder")}
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
               required
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">your email</span>
+            <span className="text-white font-medium mb-4">
+              {t("contact_label_email")}{" "}
+            </span>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="what's your email ?"
+              placeholder={t("contact_input_email_placeholder")}
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
               required
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">your message</span>
+            <span className="text-white font-medium mb-4">
+              {t("contact_label_message")}{" "}
+            </span>
             <textarea
               rows="7"
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="what do you want to say ?"
+              placeholder={t("contact_textarea_message_placeholder")}
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
               required
             />
@@ -108,7 +126,7 @@ const Contact = () => {
             className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
             type="sumbit"
           >
-            {loading ? "Sending ..." : "Send"}
+            {loading ? t("contact_button_sending") : t("contact_button_send")}
           </button>
         </form>
       </motion.div>
