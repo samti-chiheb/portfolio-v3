@@ -30,6 +30,7 @@ import {
   yoannImg,
   beerRepo,
   jedy,
+  styledComponent,
 } from "../assets";
 
 const navLinks = [
@@ -88,6 +89,10 @@ const basicTech = [
     icon: mongodb,
   },
   {
+    name: "Node JS",
+    icon: nodejs,
+  },
+  {
     name: "wordpress",
     icon: wordpress,
   },
@@ -126,10 +131,7 @@ const advancedTech = [
     name: "React JS",
     icon: reactjs,
   },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
+ 
   {
     name: "Next JS",
     icon: nextJs,
@@ -141,6 +143,10 @@ const advancedTech = [
   {
     name: "symfony",
     icon: symfony,
+  },
+  {
+    name: "styled component",
+    icon: styledComponent,
   },
 ];
 

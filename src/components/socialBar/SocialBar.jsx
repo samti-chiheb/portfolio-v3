@@ -10,16 +10,31 @@ const SocialBar = () => {
   const text = useRef(null);
 
   useEffect(() => {
-    if (isOpen) {
-      window.addEventListener("scroll", () => {
-        setIsOpen(false);
-      });
+    // Define the event listener functions
+    const handleScroll = () => {
+      setIsOpen(false);
+    };
 
-      container.current.addEventListener("focus", () => {
-        setIsOpen(false);
-      });
+    const handleFocus = () => {
+      setIsOpen(false);
+    };
+
+    // Add event listeners if isOpen is true
+    if (isOpen) {
+      window.addEventListener("scroll", handleScroll);
+      if (container.current) {
+        container.current.addEventListener("focus", handleFocus);
+      }
     }
-  }, []);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (container.current) {
+        container.current.removeEventListener("focus", handleFocus);
+      }
+    };
+  }, [isOpen, setIsOpen]);
 
   useEffect(() => {
     if (!isOpen) {

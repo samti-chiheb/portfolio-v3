@@ -28,6 +28,7 @@ import photoshop from "./tech/photoshop.svg";
 import illustrator from "./tech/illustrator.svg";
 import contactImg from "./contact_img.svg";
 import nextJs from "./tech/nextJs.svg";
+import styledComponent from "./tech/styled_component.svg";
 
 import theAdvisor from "./the_advisor.png";
 import weatherApp from "./weather_app.webp";
@@ -52,6 +53,7 @@ import mail from "./social/mail.svg";
 
 import yoannImg from "./yoann.jpeg";
 import jedy from './jedy.svg'
+import profilePhoto from "./profile_photo.png";
 
 export {
   logo,
@@ -101,5 +103,7 @@ export {
   eye,
   yoannImg,
   beerRepo,
-  jedy
+  jedy,
+  styledComponent,
+  profilePhoto,
 };

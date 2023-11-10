@@ -4,12 +4,13 @@ import React, { useState, useEffect } from "react";
 import {
   Loader,
   About,
+  // Header,
   Contact,
   Testimonial,
   Hero,
   Navbar,
   Skills,
-  Works,
+  Projects,
   Footer,
   SocialBar,
   Experience,
@@ -32,7 +33,7 @@ const App = () => {
     <BrowserRouter>
       {loading && <Loader />}
       <div
-        className="relative z-0 bg-primary main-element"
+        className="relative z-0 bg-primary main-element scroll-snap-y scroll-container "
         style={{ visibility: loading ? "hidden" : "visible" }}
       >
         <Navbar />
@@ -41,7 +42,7 @@ const App = () => {
         <About />
         <Skills />
         <Experience />
-        <Works />
+        <Projects />
         <Testimonial />
         <div className="relative z-0">
           <Contact />

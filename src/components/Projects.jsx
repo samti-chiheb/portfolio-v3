@@ -80,7 +80,7 @@ const ProjectCard = ({
   );
 };
 
-const Works = () => {
+const Projects = () => {
   const { t } = useTranslation();
 
   return (
@@ -117,4 +117,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "projects");
+export default SectionWrapper(Projects, "projects");

@@ -62,8 +62,9 @@ const Contact = () => {
       },
     },
   };
+
   return (
-    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+    <div className=" lg:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl "
@@ -82,7 +83,7 @@ const Contact = () => {
         >
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">
-              {t("contact_label_name")}{" "}
+              {t("contact_label_name")}
             </span>
             <input
               type="text"
@@ -132,13 +133,14 @@ const Contact = () => {
       </motion.div>
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[400px]"
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[400px] flex justify-center "
       >
         <motion.img
           src={contactImg}
           alt="Floating Image"
+          width={"390"}
           animate={{
-            y: [60, 5],
+            y: [-30, 30],
           }}
           transition={{
             duration: 2.5,

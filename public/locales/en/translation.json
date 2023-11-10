@@ -1,4 +1,8 @@
 {
+  "i-am": "I'am",
+  "hero_headtext": "Passionate Full-Stack Developer",
+  "hero_subtext": "Crafting modern, responsive web solutions with ReactJS, Next.js, and more 🚀",
+
   "nav_about": "About",
   "nav_skills": "Skills",
   "nav_projects": "Projects",
@@ -14,10 +18,10 @@
   "about_additional_paragraph_2": "I like working with others and am ready to use what I know in a place that's making cool stuff happen...",
 
   "section_02": "================================================skills================================================",
-  "section_subtext_skills": "Introduction",
-  "section_headtext_skills": "Aperçu.",
-  "advanced_level": "Niveau avancée",
-  "basic_level": "Niveau basique",
+  "section_subtext_skills": "My skills",
+  "section_headtext_skills": "Technologies.",
+  "advanced_level": ". Advanced level",
+  "basic_level": ". Basic level",
 
   "section_03": "================================================experience================================================",
   "section_subtext_experiences": "What I have done so far",

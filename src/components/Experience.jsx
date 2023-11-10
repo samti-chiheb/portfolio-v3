@@ -61,7 +61,7 @@ const Experience = () => {
   const { t } = useTranslation();
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} >
         <p className={styles.sectionSubText}>
           {t("section_subtext_experiences")}
         </p>

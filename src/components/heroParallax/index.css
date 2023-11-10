@@ -15,17 +15,17 @@
 }
 
 .parallax-container h1 {
-  top: 40%;
+  top: 35%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 280px;
+  transform: translate(-50%, -35%);
+  min-width: 670px;
 }
 
 .parallax-container p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 260px;
+  min-width: 670px;
 }
 
 .front-text {
@@ -43,7 +43,6 @@
   height: 120vh;
   transition: 0.5s cubic-bezier(0.2, 0.49, 0.32, 0.99);
 }
-
 
 .parallax-container::after {
   content: "";
@@ -68,6 +67,18 @@
   .parallax-container p {
     width: 80%;
     text-align: center;
+  }
+}
+
+@media screen and (width < 425px) {
+  .parallax-container h1,
+  .parallax-container p {
+    min-width: 0;
+    width: 80%;
+    text-align: center;
+  }
+  .parallax-container p {
+    top: 60%;
   }
 }
 
@@ -105,5 +116,3 @@ p.front-text {
     text-shadow: none;
   }
 }
-
-/* end outlined text*/

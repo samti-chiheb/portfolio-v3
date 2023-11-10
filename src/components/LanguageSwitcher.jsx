@@ -1,8 +1,10 @@
-import React from "react";
+import Cookies from "js-cookie";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
+  const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
   const handleChangeLanguage = (event) => {
     console.log(event.target.value);
@@ -10,14 +12,18 @@ const LanguageSwitcher = () => {
     Cookies.set("i18next", event.target.value);
   };
 
+  useEffect(() => {
+    setSelectedLanguage(i18n.language);
+  }, [i18n.language]);
+
   return (
     <select
       className="text-secondary cursor-pointer w-14 rounded-md p-1 bg-tertiary"
       onChange={handleChangeLanguage}
-      value={i18n.language}
+      value={selectedLanguage}
     >
-      <option value="en">🏴󠁧󠁢󠁥󠁮󠁧󠁿</option>
-      <option value="fr">🇫🇷</option>
+      <option value="en">EN</option>
+      <option value="fr">FR</option>
     </select>
   );
 };

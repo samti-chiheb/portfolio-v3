@@ -1,4 +1,8 @@
 {
+  "i-am" : "C'est",
+  "hero_headtext": "Développeur Full-Stack Passionné",
+  "hero_subtext": "Conception de solutions web modernes et réactives avec ReactJS, Next.js, et plus 🚀",
+
   "section_00": "================================================navbar================================================",
   "nav_about": "À propos",
   "nav_skills": "Compétences.",
